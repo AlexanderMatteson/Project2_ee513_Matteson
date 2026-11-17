@@ -1,0 +1,416 @@
+
+pytorch
+2.14.0+cpu:˜ñ
+‚	
+noisy_image
+network.0.weight
+network.0.biasconv2dnode_conv2d"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jò
+	namespaceä: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.0: torch.nn.modules.conv.Conv2d/conv2d: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J∫
+pkg.torch.onnx.fx_nodeü%conv2d : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%x, %p_network_0_weight, %p_network_0_bias, [1, 1], [1, 1]), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'network', 'network.0', 'conv2d']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+É
+conv2drelu	node_relu"ReluJò
+	namespaceä: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.1: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJù
+pkg.torch.onnx.class_hierarchy{['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÉ
+pkg.torch.onnx.fx_nodei%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d,), kwargs = {})JB
+pkg.torch.onnx.name_scopes$['', 'network', 'network.1', 'relu']J‹
+pkg.torch.onnx.stack_traceΩFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ë	
+relu
+network.2.weight
+network.2.biasconv2d_1node_conv2d_1"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.2: torch.nn.modules.conv.Conv2d/conv2d_1: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jø
+pkg.torch.onnx.fx_node§%conv2d_1 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu, %p_network_2_weight, %p_network_2_bias, [1, 1], [1, 1]), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'network', 'network.2', 'conv2d_1']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ë
+conv2d_1relu_1node_relu_1"ReluJö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.3: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJù
+pkg.torch.onnx.class_hierarchy{['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_1,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'network', 'network.3', 'relu_1']J‹
+pkg.torch.onnx.stack_traceΩFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ï	
+relu_1
+network.4.weight
+network.4.biasconv2d_2node_conv2d_2"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.4: torch.nn.modules.conv.Conv2d/conv2d_2: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¡
+pkg.torch.onnx.fx_node¶%conv2d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_1, %p_network_4_weight, %p_network_4_bias, [1, 1], [1, 1]), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'network', 'network.4', 'conv2d_2']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ë
+conv2d_2relu_2node_relu_2"ReluJö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.5: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJù
+pkg.torch.onnx.class_hierarchy{['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_2,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'network', 'network.5', 'relu_2']J‹
+pkg.torch.onnx.stack_traceΩFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ï	
+relu_2
+network.6.weight
+network.6.biasconv2d_3node_conv2d_3"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.6: torch.nn.modules.conv.Conv2d/conv2d_3: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¡
+pkg.torch.onnx.fx_node¶%conv2d_3 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_2, %p_network_6_weight, %p_network_6_bias, [1, 1], [1, 1]), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'network', 'network.6', 'conv2d_3']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ë
+conv2d_3relu_3node_relu_3"ReluJö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.7: torch.nn.modules.activation.ReLU/relu_3: aten.relu.defaultJù
+pkg.torch.onnx.class_hierarchy{['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_3,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'network', 'network.7', 'relu_3']J‹
+pkg.torch.onnx.stack_traceΩFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+Ï	
+relu_3
+network.8.weight
+network.8.biasconv2d_4node_conv2d_4"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.8: torch.nn.modules.conv.Conv2d/conv2d_4: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¡
+pkg.torch.onnx.fx_node¶%conv2d_4 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_3, %p_network_8_weight, %p_network_8_bias, [1, 1], [1, 1]), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'network', 'network.8', 'conv2d_4']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ë
+conv2d_4relu_4node_relu_4"ReluJö
+	namespaceå: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.9: torch.nn.modules.activation.ReLU/relu_4: aten.relu.defaultJù
+pkg.torch.onnx.class_hierarchy{['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv2d_4,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'network', 'network.9', 'relu_4']J‹
+pkg.torch.onnx.stack_traceΩFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+˘	
+relu_4
+network.10.weight
+network.10.biaspredicted_noisenode_conv2d_5"Conv*
+kernel_shape@@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@@†*
+strides@@†*
+pads@@@@†Jõ
+	namespaceç: __main__.DenoisingCNN/network: torch.nn.modules.container.Sequential/network.10: torch.nn.modules.conv.Conv2d/conv2d_5: aten.conv2d.defaultJõ
+pkg.torch.onnx.class_hierarchyy['__main__.DenoisingCNN', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J√
+pkg.torch.onnx.fx_node®%conv2d_5 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%relu_4, %p_network_10_weight, %p_network_10_bias, [1, 1], [1, 1]), kwargs = {})JG
+pkg.torch.onnx.name_scopes)['', 'network', 'network.10', 'conv2d_5']J‰
+pkg.torch.onnx.stack_trace≈File "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 35, in forward
+    predicted_noise = self.network(x)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\mattesoa\Documents\ee513\.venv\Lib\site-packages\torch\nn\modules\conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+±
+noisy_image
+predicted_noisedenoised_imagenode_sub_32"SubJ<
+	namespace/: __main__.DenoisingCNN/sub_32: aten.sub.TensorJN
+pkg.torch.onnx.class_hierarchy,['__main__.DenoisingCNN', 'aten.sub.Tensor']Jà
+pkg.torch.onnx.fx_noden%sub_32 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%x, %conv2d_5), kwargs = {})J,
+pkg.torch.onnx.name_scopes['', 'sub_32']Jß
+pkg.torch.onnx.stack_traceàFile "C:\Users\mattesoa\AppData\Local\Temp\1\ipykernel_33804\268417901.py", line 36, in forward
+    denoised_image = x - predicted_noise
+main_graph*^ Bnetwork.0.weightj!
+locationnoise2noise.onnx.dataj
+offset0j
+length1152p*ó Bnetwork.0.biasJÄ†pLæ!G>ÍênæU<d>ÁPæ=#ÁÍΩæÖ÷<Ñcˆ=Ôo≤æT⁄<=⁄ †=Æ•ë>J4zΩÜ%=7ÿ Ω∫«$=E$æz…-æÍö«=©}T=ﬂ2>\Í<o—∏=ag ºQX€<t¶x>S*Ï=u=8n£= é>,ò?Ωó≠J=*b  Bnetwork.2.weightj!
+locationnoise2noise.onnx.dataj
+offset1152j
+length36864p*ó Bnetwork.2.biasJÄ‹’ü<À<O;˝Z=†M'Ω lΩøX=¨ÒN<”ˇ<]Bx=∏º<€.Ä<´V
+ΩhHVºD;¸<U\R= D4ΩıÛº·sº,HgºÕ]]ΩNˆº^å<PWƒ<(Öëºˇ4Œ<èw!=M:…ª∏)Ω`$</:Ωï?Q;ç	øº*c  Bnetwork.4.weightj!
+locationnoise2noise.onnx.dataj
+offset38016j
+length36864p*ó Bnetwork.4.biasJÄƒ·#=≤0§<3ëºÑdÜΩ „=ƒ∏˙;\Ω`Ω1∆IΩT˝∫7‡üª4};=u=è„a=q=_Ωxëß<dí(ΩDêÖºË°=XΩÓb√;*ëNΩL˜˙<näΩz¥=W∆ΩÇcCΩ ¸Mº7%µºªB’ºŒÙ„<J$'ºèg.=*c  Bnetwork.6.weightj!
+locationnoise2noise.onnx.dataj
+offset74880j
+length36864p*ó Bnetwork.6.biasJÄQ4&= Ωªu.î<ÇŸæ∫PΩ"**=Qò<ˆ’A=ì=W∫å∫ûN‰<h≤<Ê<`=Œóºø±°<)∂.=_çîº^=ﬁoÄΩÚ‘8Ω¬o§<ˇe=¸î<c,+=Å7”<ic∫≈*“;z£<€Ö+ºΩ–-=)l¶<*d  Bnetwork.8.weightj!
+locationnoise2noise.onnx.dataj
+offset111744j
+length36864p*ó Bnetwork.8.biasJÄ”iÄΩfd‰ºÁ#_<î∏0=lX´º¸S=wŒ-=Dè)= ¥UΩÕ∏Eº#ôëª˘ÀRº¶03Ω_(º2h¢<qt=AÂ<Ä´ºy`DΩ!≥=-®º6=?\6=tKJ=sím=mMJ=í 9<ºUΩ´7æº^—<m¥WΩ!áò<*d Bnetwork.10.weightj!
+locationnoise2noise.onnx.dataj
+offset148608j
+length1152p*Bnetwork.10.biasJv =Z÷
+noisy_image!
+
+
+
+height
+width"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
+!pkg.torch.onnx.original_node_namexb°
+denoised_image!
+
+
+
+height
+width"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"+
+!pkg.torch.onnx.original_node_namesub_32b§
+predicted_noise!
+
+
+
+height
+width"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"-
+!pkg.torch.onnx.original_node_nameconv2d_5j‡
+network.0.weight
+
+ 
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_network_0_weightj–
+network.0.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_network_0_biasj‡
+network.2.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_network_2_weightj–
+network.2.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_network_2_biasj‡
+network.4.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_network_4_weightj–
+network.4.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_network_4_biasj‡
+network.6.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_network_6_weightj–
+network.6.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_network_6_biasj‡
+network.8.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_network_8_weightj–
+network.8.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"5
+!pkg.torch.onnx.original_node_namep_network_8_biasj‚
+network.10.weight
+
+
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_network_10_weightj“
+network.10.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_network_10_biasj+
+conv2d!
+
+
+ 
+height
+widthj)
+relu!
+
+
+ 
+height
+widthj-
+conv2d_1!
+
+
+ 
+height
+widthj+
+relu_1!
+
+
+ 
+height
+widthj-
+conv2d_2!
+
+
+ 
+height
+widthj+
+relu_2!
+
+
+ 
+height
+widthj-
+conv2d_3!
+
+
+ 
+height
+widthj+
+relu_3!
+
+
+ 
+height
+widthj-
+conv2d_4!
+
+
+ 
+height
+widthj+
+relu_4!
+
+
+ 
+height
+widthÇé
+0pkg.torch.export.ExportedProgram.graph_signatureŸ
+# inputs
+p_network_0_weight: PARAMETER target='network.0.weight'
+p_network_0_bias: PARAMETER target='network.0.bias'
+p_network_2_weight: PARAMETER target='network.2.weight'
+p_network_2_bias: PARAMETER target='network.2.bias'
+p_network_4_weight: PARAMETER target='network.4.weight'
+p_network_4_bias: PARAMETER target='network.4.bias'
+p_network_6_weight: PARAMETER target='network.6.weight'
+p_network_6_bias: PARAMETER target='network.6.bias'
+p_network_8_weight: PARAMETER target='network.8.weight'
+p_network_8_bias: PARAMETER target='network.8.bias'
+p_network_10_weight: PARAMETER target='network.10.weight'
+p_network_10_bias: PARAMETER target='network.10.bias'
+x: USER_INPUT
+
+# outputs
+sub_32: USER_OUTPUT
+conv2d_5: USER_OUTPUT
+ÇÖ
+2pkg.torch.export.ExportedProgram.range_constraintsO{s53: VR[1, int_oo], s0: VR[1, int_oo], s83: VR[0, int_oo], s64: VR[0, int_oo]}B
+ 
